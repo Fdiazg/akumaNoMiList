@@ -1,0 +1,43 @@
+<ion-header [translucent]="true" mode="ios">
+  <ion-toolbar>
+    <ion-title>
+      Akuma No Mi
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+  <ion-header collapse="condense" mode="ios">
+    <ion-toolbar>
+      <ion-title size="large">Akuma No Mi</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-grid fixed>
+  <ion-row>
+    <ion-col size="12" *ngFor="let fruta of frutas, let i =index">
+      <ion-card>
+        <ion-card-subtitle class="ion-margin">
+          <ion-row class="ion-align-items-center">
+            <ion-col size="12" class="ion-margin">
+              <span  class="text-primary">{{i+1}}. </span>
+              <span class="nombreFruta-source-name">{{fruta.nombreFruta}}</span>
+            </ion-col>
+            <ion-card-title class="ion-padding-horizontal ion-margin-botton">
+              Tipo: {{fruta.tipo}}
+            </ion-card-title>
+            <ion-img [src]="fruta.imagen" class="img-alinear"></ion-img>
+            <ion-card-content>
+              <p>Usuario: {{fruta.usuario}}</p>
+            </ion-card-content>
+          </ion-row>
+        </ion-card-subtitle>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+
+<!-- <p *ngFor="let fruta of frutas">{{fruta.nombreFruta}} </p> -->
+</ion-content>
