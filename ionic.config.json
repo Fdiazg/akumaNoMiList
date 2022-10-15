@@ -1,0 +1,7 @@
+{
+  "name": "akumaNoMi",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
